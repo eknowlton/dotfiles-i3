@@ -1,0 +1,20 @@
+[user]
+# Please adapt and uncomment the following lines:
+	name = Ethan Knowlton
+	email = eknowlton@gmail.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[merge]
+        tool = vimdiff
+[diff]
+        tool = nvimdiff
+[difftool]
+        prompt = false
+[mergetool]
+        prompt = false
+[difftool "nvimdiff"]
+        cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
+[mergetool "nvimdiff"]
+        cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
