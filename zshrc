@@ -105,6 +105,8 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias vim="nvim"
+alias ll="ls -la"
+alias vimd="nvim -d"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/ethan/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ethan/google-cloud-sdk/path.zsh.inc'; fi
