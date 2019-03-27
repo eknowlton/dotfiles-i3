@@ -10,6 +10,24 @@ export ZSH="/home/ethan/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="nanotech"
 
+# Setting ZSH Theme for Powerline9k
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator user dir_writable dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs command_execution_time background_jobs time disk_usage ram)
+#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+#POWERLEVEL9K_USER_ICON="\uF415" # 
+POWERLEVEL9K_ROOT_ICON="\uF09C"
+#POWERLEVEL9K_SUDO_ICON=$'\uF09C' # 
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
+#POWERLEVEL9K_VCS_GIT_ICON='\uF408 '
+#POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uF408 '
+#POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
+#POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
+POWERLEVEL9K_MODE='nerdfont-complete'
+# END Ponwerlin9k
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -115,3 +133,5 @@ if [ -f '/home/ethan/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ethan/googl
 if [ -f '/home/ethan/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ethan/google-cloud-sdk/completion.zsh.inc'; fi
 
 export EDITOR="nvim"
+
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
