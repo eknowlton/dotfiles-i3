@@ -135,3 +135,5 @@ if [ -f '/home/ethan/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ethan
 export EDITOR="nvim"
 
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+
+[[ -d "$HOME/bin" ]] && export PATH="$HOME/bin:$PATH"
