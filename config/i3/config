@@ -43,6 +43,10 @@ bindsym $mod+p exec --no-startup-id $HOME/.config/rofi/launch.sh
 # change monitor focus
 bindsym $mod+Shift+n focus output right
 
+bindsym --release Print exec "scrot -m '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release Shift+Print exec "scrot -s '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+k focus down
@@ -135,9 +139,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-bindsym --release Print exec scrot
-bindsym --release $mod+Print exec scrot -s
-
 # class                 border  backgr. text    indicator child_border
 client.focused          #3a3a3a #285577 #ffffff #2e9ef4   #3a3a3a
 client.focused_inactive #333333 #3a3a3a #ffffff #484e50   #3a3a3a
@@ -196,3 +197,4 @@ bindsym $mod+Escape mode "$mode_system"
 
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec xautolock -time 5 -locker $Locker
