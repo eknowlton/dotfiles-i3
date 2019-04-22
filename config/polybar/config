@@ -155,7 +155,7 @@ wrapping-scroll = true
 strip-wsnumbers = true
 pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-foreground = #0088CC
 
 label-unfocused-foreground = #555555
@@ -165,7 +165,7 @@ label-visible-foregroud = #888888
 label-visible-padding = 1
 
 label-focused-foreground = #0088CC
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-urgent-padding = 1
 
@@ -199,7 +199,7 @@ ramp-coreload-3-foreground = #0088CC
 [module/memory]
 type = internal/memory
 format = <label> <bar-used>
-label = RAM [%gb_used%]
+label = RAM
 ;label-foreground = #0088CC
 
 bar-used-width = 10
@@ -223,7 +223,7 @@ interface = enp3s0
 interval = 0.5
 
 ;format-connected-underline = #0088CC
-label-connected = [  %upspeed% |  %downspeed% ]
+label-connected = [  %upspeed% |  %downspeed% | %local_ip% ]
 ;label-connected-foreground = #2aa198
 
 ;format-disconnected-underline = ${self.format-connected-underline}
@@ -249,7 +249,7 @@ interface = wlp4s0
 interval = 0.5
 
 ;format-connected-underline = #0088CC
-label-connected =  [  %upspeed% |  %downspeed% ]
+label-connected =  [  %upspeed% |  %downspeed% | %local_ip% ]
 ;label-connected-foreground = #2aa198
 
 ;format-disconnected-underline = ${self.format-connected-underline}
@@ -273,11 +273,8 @@ bar-progress-empty-font = 3
 type = internal/date
 interval = 0.5
 
-date =
-date-alt = " %d/%m/%Y "
-
-time =  %d/%m/%Y %H:%M:%S
-time-alt = %H:%M:%S
+date =  %d/%m/%Y
+time = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
