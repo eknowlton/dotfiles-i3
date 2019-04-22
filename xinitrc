@@ -32,6 +32,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+compton &
 feh --bg-scale ~/wallpaper.jpg
 conky -c ~/.config/conky/conky.conf
 eval $(ssh-agent)
