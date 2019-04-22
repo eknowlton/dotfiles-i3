@@ -42,3 +42,5 @@ export EDITOR="nvim"
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
 [[ -d "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
+[[ -d "$HOME/.deno" ]] && export PATH="$HOME/.deno/bin:$PATH"
+[[ -d "$HOME/.cargo" ]] && export PATH="$HOME/.cargo/bin:$PATH"
