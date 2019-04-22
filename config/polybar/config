@@ -26,7 +26,7 @@ screenchange-reload = true
 [bar/bottom]
 monitor = eDP1
 modules-left =
-modules-center = cpu memory eth temperature date volume
+modules-center = cpu memory eth wlan temperature date volume
 modules-right =
 
 background = #00000000
@@ -65,14 +65,14 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = hack:pixelsize=12;1
-font-1 = unifont:size=6:heavy:fontformat=truetype;-2
-font-2 = siji:pixelsize=10;0
-font-3 = FontAwesome:size=11;-1
+font-0 = DejaVuSansMono Nerd Font:pixelsize=12;1
+font-1 = DejaVuSansMono Nerd Font:size=6:heavy:fontformat=truetype;-2
+font-2 = DejaVuSansMono Nerd Font:pixelsize=10;0
+font-3 = DejaVuSansMono Nerd Font:size=11;-1
 
 modules-left = menu i3 xwindow
 modules-center =
-modules-right = cpu memory eth date volume
+modules-right = cpu memory eth wlan date volume
 
 tray-position = right
 tray-padding = 0
@@ -223,7 +223,33 @@ interface = enp3s0
 interval = 0.5
 
 ;format-connected-underline = #0088CC
-label-connected =  [ :   %upspeed% | :   %downspeed% ]
+label-connected = [  %upspeed% |  %downspeed% ]
+;label-connected-foreground = #2aa198
+
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = NET %ifname% disconnected
+;label-disconnected-foreground = NET ${colors.foreground-alt}
+
+;Required if <bar-progress> is used
+bar-progress-width = 5
+bar-progress-format = %{+u}%{+o}%fill%%{-u}%{-o}%indicator%%{+u}%{+o}%empty%%{-u}%{-o}
+bar-progress-indicator = |
+bar-progress-indicator-foreground = ${BAR.foreground}
+bar-progress-indicator-font = 3
+bar-progress-fill = █
+bar-progress-fill-foreground = #5a5
+bar-progress-fill-font = 3
+bar-progress-empty = █
+bar-progress-empty-foreground = #555
+bar-progress-empty-font = 3
+
+[module/wlan]
+type = internal/network
+interface = wlp4s0
+interval = 0.5
+
+;format-connected-underline = #0088CC
+label-connected =  [  %upspeed% |  %downspeed% ]
 ;label-connected-foreground = #2aa198
 
 ;format-disconnected-underline = ${self.format-connected-underline}
@@ -248,9 +274,9 @@ type = internal/date
 interval = 0.5
 
 date =
-date-alt = " %d/%m/%Y |"
+date-alt = " %d/%m/%Y "
 
-time =  %d/%m/%Y | %H:%M:%S
+time =  %d/%m/%Y %H:%M:%S
 time-alt = %H:%M:%S
 
 format-prefix = 
