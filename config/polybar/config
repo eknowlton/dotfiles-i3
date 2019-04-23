@@ -72,7 +72,7 @@ font-3 = DejaVuSansMono Nerd Font:size=11;-1
 
 modules-left = menu i3 xwindow
 modules-center =
-modules-right = cpu memory eth wlan date volume
+modules-right = cpu memory eth wlan date battery volume
 
 tray-position = right
 tray-padding = 0
@@ -96,6 +96,28 @@ type = custom/script
 exec = xwindowname tail
 tail = true
 format = %{T3} <output> %{T-}
+
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
+full-at = 99
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = ADP1
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
 
 [module/xkeyboard]
 type = internal/xkeyboard
