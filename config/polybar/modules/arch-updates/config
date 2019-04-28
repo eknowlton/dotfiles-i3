@@ -1,0 +1,8 @@
+type = custom/script
+exec = ~/.config/polybar/modules/arch-updates/arch-updates.sh
+interval = 600
+
+; Available tokens:
+;   %output%
+; Default: %output%
+label = P %output%
