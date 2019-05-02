@@ -7,10 +7,11 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 export MONITOR_PRIMARY=eDP1
+export WIRELESS=wlp4s0
+export WIRED=enp0s25
 
 # Launch Polybar, using default config location ~/.config/polybar/config
 polybar primary-top &
 polybar primary-bottom &
-
 
 echo "Polybar launched..."

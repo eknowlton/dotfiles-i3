@@ -15,7 +15,7 @@ width = 100%
 height = 35
 monitor = ${env:MONITOR_PRIMARY}
 modules-left = i3 xwindow
-modules-right = network date
+modules-right = pulseaudio network battery date
 modules-center =
 
 ;padding = 2
@@ -115,3 +115,9 @@ include-file = $HOME/.config/polybar/modules/arch-updates/config
 
 [module/arch-updates-aur]
 include-file = $HOME/.config/polybar/modules/arch-updates-aur/config
+
+[module/battery]
+include-file = $HOME/.config/polybar/modules/battery/config
+
+[module/pulseaudio]
+include-file = $HOME/.config/polybar/modules/pulseaudio/config

@@ -14,12 +14,12 @@ interval = 3.0
 ; @deprecated: Define min width using token specifiers (%downspeed:min% and %upspeed:min%)
 ; Minimum output width of upload/download rate
 ; Default: 3
-udspeed-minwidth = 5
+;udspeed-minwidth = 5
 
 ; Accumulate values from all interfaces
 ; when querying for up/downspeed rate
 ; Default: false
-accumulate-stats = true
+;accumulate-stats = true
 
 ; Consider an `UNKNOWN` interface state as up.
 ; Some devices have an unknown state, even when they're running
@@ -52,11 +52,13 @@ format-packetloss = <animation-packetloss> <label-connected>
 ;   %linkspeed% [wired]
 
 ; Default: %ifname% %local_ip%
-label-connected = [ %essid% %upspeed:7% %downspeed:7% %local_ip% %local_ip6% ]
+label-connected = %essid% %upspeed:9% %downspeed:9% %local_ip% %local_ip6%
 label-connected-foreground = #eefafafa
+label-connected-background = #50000000
+label-connected-padding = 2
 
 ; Default: (none)
-label-disconnected = not connected
+label-disconnected =
 label-disconnected-foreground = #66ffffff
 
 ; Default: (none)

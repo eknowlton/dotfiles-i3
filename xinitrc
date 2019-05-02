@@ -32,9 +32,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+dbus-update-activation-environment --systemd DISPLAY
+
 compton --config ~/.config/compton/compton.conf &
 nm-applet &
 feh --bg-scale ~/wallpaper.jpg
-conky -c ~/.config/conky/conky.conf
-eval $(ssh-agent)
+
+# not sure i like conky
+#conky -c ~/.config/conky/conky.conf
+
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
 exec i3 --shmlog-size=26214400

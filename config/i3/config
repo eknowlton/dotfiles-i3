@@ -5,7 +5,11 @@
 # this file and re-run i3-config-wizard(1).
 #
 #
-new_window 1pixel
+#new_window 1pixel
+default_border none
+default_floating_border normal
+
+workspace_auto_back_and_forth yes
 
 # i3 config file (v4)
 #
@@ -15,7 +19,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:DejaVuSansMono Nerd Font 16
+font pango:DejaVuSansMono Nerd Font 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
