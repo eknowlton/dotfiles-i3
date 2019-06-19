@@ -15,7 +15,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:DejaVuSansMono Nerd Font 16
+font pango:DejaVuSansMono Nerd Font 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -42,10 +42,10 @@ bindsym $mod+p exec --no-startup-id $HOME/.config/rofi/launch.sh
 
 # change monitor focus
 bindsym $mod+Shift+n focus output right
+bindsym $mod+Shift+m move workspace to output right
 
-bindsym --release Print exec "scrot -m '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
-bindsym --release Shift+Print exec "scrot -s '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
-bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release $mod+F5 exec "scrot -m '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release $mod+Shift+F5 exec "scrot -s '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
 
 # change focus
 bindsym $mod+h focus left
@@ -53,23 +53,11 @@ bindsym $mod+k focus down
 bindsym $mod+j focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+j move up
 bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+i split h
@@ -196,6 +184,9 @@ mode "$mode_system" {
 bindsym $mod+Escape mode "$mode_system"
 
 for_window [class="Gnome-todo" instance="gnome-todo"] floating enable
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 
+exec_always ~/.screenlayout/three-monitors.sh
+exec_always compton --config ~/.config/compton/compton.conf
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec xautolock -time 5 -locker $Locker

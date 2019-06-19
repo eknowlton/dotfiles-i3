@@ -12,7 +12,7 @@
 [bar/primary-top]
 background = #20000000
 width = 100%
-height = 35
+height = 45
 monitor = ${env:MONITOR_PRIMARY}
 modules-left = i3 xwindow
 modules-right = network date
@@ -26,7 +26,7 @@ module-margin = 2
 ;module-margin-left =
 ;module-margin-right =
 
-font-0 = DejaVuSansMono Nerd Font:pixelsize=12;1
+font-0 = DejaVuSansMono Nerd Font:pixelsize=14;1
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled
@@ -44,7 +44,7 @@ tray-position = right
 tray-detached = false
 
 ; Tray icon max size
-tray-maxsize = 16
+tray-maxsize = 24
 
 ; DEPRECATED! Since 3.3.0 the tray always uses pseudo-transparency
 ; Enable pseudo transparency
@@ -63,15 +63,34 @@ tray-offset-x = 0
 tray-offset-y = 0
 
 ; Pad the sides of each tray icon
-tray-padding = 0
+tray-padding = 4
 
 ; Scale factor for tray clients
 tray-scale = 1.0
 
+[bar/secondary-top]
+background = #20000000
+width = 100%
+height = 45
+monitor = ${env:MONITOR}
+modules-left = i3 xwindow
+modules-right = network date
+modules-center =
+
+;padding = 2
+padding-left = 0
+padding-right = 2
+
+module-margin = 2
+;module-margin-left =
+;module-margin-right =
+
+font-0 = DejaVuSansMono Nerd Font:pixelsize=14;1
+
 [bar/primary-bottom]
 background = #20000000
 width = 100%
-height = 35
+height = 45
 monitor = ${env:MONITOR_PRIMARY}
 modules-left =
 modules-right =
@@ -87,7 +106,7 @@ module-margin = 2
 ;module-margin-left =
 ;module-margin-right =
 
-font-0 = DejaVuSansMono Nerd Font:pixelsize=12;1
+font-0 = DejaVuSansMono Nerd Font:pixelsize=14;1
 
 [module/i3]
 include-file = $HOME/.config/polybar/modules/workspaces/config

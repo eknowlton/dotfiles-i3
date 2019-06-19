@@ -2,7 +2,6 @@ type = internal/fs
 
 ; Mountpoints to display
 mount-0 = /
-mount-1 = /home
 
 ; Seconds to sleep between updates
 ; Default: 30

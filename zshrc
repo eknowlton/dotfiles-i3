@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -36,6 +38,8 @@ fi
 alias vim="nvim"
 alias ll="ls -la"
 alias vimd="nvim -d"
+alias rails="./bin/rails"
+alias bundle="./bin/bundle"
 
 export EDITOR="nvim"
 
@@ -44,3 +48,6 @@ source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 [[ -d "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
 [[ -d "$HOME/.deno" ]] && export PATH="$HOME/.deno/bin:$PATH"
 [[ -d "$HOME/.cargo" ]] && export PATH="$HOME/.cargo/bin:$PATH"
+
+eval "$(direnv hook zsh)"
+
