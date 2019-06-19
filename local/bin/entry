@@ -1,0 +1,7 @@
+#!/bin/bash
+
+folder=`date +%Y-%m-%d`
+mkdir -p $folder
+cd $folder
+
+nvim +star `date +%Y%m%d`".jrnl"
