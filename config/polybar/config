@@ -15,7 +15,7 @@ width = 100%
 height = 35
 monitor = ${env:MONITOR_PRIMARY}
 modules-left = i3 xwindow
-modules-right = network date
+modules-right = ipcheck wired date
 modules-center =
 
 ;padding = 2
@@ -69,7 +69,7 @@ tray-padding = 0
 tray-scale = 1.0
 
 [bar/primary-bottom]
-background = #20000000
+background = #50000000
 width = 100%
 height = 35
 monitor = ${env:MONITOR_PRIMARY}
@@ -82,6 +82,25 @@ bottom = true
 padding = 2
 ;padding-left =
 ;padding-right =
+
+module-margin = 2
+;module-margin-left =
+;module-margin-right =
+
+font-0 = DejaVuSansMono Nerd Font:pixelsize=12;1
+
+[bar/secondary-top]
+background = #20000000
+width = 100%
+height = 35
+monitor = ${env:MONITOR_SECONDARY}
+modules-left = i3 xwindow
+modules-right = ipcheck wired date
+modules-center =
+
+;padding = 2
+padding-left = 0
+padding-right = 2
 
 module-margin = 2
 ;module-margin-left =
@@ -107,8 +126,11 @@ include-file = $HOME/.config/polybar/modules/xwindow/config
 [module/date]
 include-file = $HOME/.config/polybar/modules/date/config
 
-[module/network]
-include-file = $HOME/.config/polybar/modules/network/config
+[module/wired]
+include-file = $HOME/.config/polybar/modules/wired/config
+
+[module/ipcheck]
+include-file = $HOME/.config/polybar/modules/ipcheck/config
 
 [module/arch-updates]
 include-file = $HOME/.config/polybar/modules/arch-updates/config

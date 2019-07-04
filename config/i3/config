@@ -41,11 +41,12 @@ bindsym $mod+Shift+c kill
 bindsym $mod+p exec --no-startup-id $HOME/.config/rofi/launch.sh
 
 # change monitor focus
-bindsym $mod+Shift+n focus output right
+bindsym $mod+n focus output right
+bindsym $mod+Shift+m move workspace to output left
 
-bindsym --release Print exec "scrot -m '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
-bindsym --release Shift+Print exec "scrot -s '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
-bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '/home/ethan/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release Print exec "scrot -m '$HOME/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release Shift+Print exec "scrot -s '$HOME/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '$HOME/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
 
 # change focus
 bindsym $mod+h focus left

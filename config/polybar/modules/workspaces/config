@@ -19,7 +19,7 @@ index-sort = true
 
 ; Create click handler used to focus workspace
 ; Default: true
-enable-click = false
+enable-click = true
 
 ; Create scroll handlers used to cycle workspaces
 ; Default: true
@@ -69,10 +69,10 @@ label-mode-background = #e60053
 ;   %index%
 ;   %output%
 ; Default: %icon%  %name%
-label-focused = %icon%
-label-focused-foreground = #ffffff
-label-focused-background = #803f3f3f
-label-focused-underline = #fba922
+label-focused = %icon% %index%
+label-focused-foreground = #fff
+label-focused-background = #80000000
+;label-focused-underline = #fff
 label-focused-padding = 2
 
 ; Available tokens:
@@ -81,7 +81,7 @@ label-focused-padding = 2
 ;   %index%
 ;   %output%
 ; Default: %icon%  %name%
-label-unfocused = %icon%
+label-unfocused = %icon% %index%
 label-unfocused-padding = 2
 
 ; Available tokens:
@@ -90,7 +90,7 @@ label-unfocused-padding = 2
 ;   %index%
 ;   %output%
 ; Default: %icon%  %name%
-label-visible = %index%
+label-visible = %icon% %index%
 label-visible-underline = #555555
 label-visible-padding = 2
 
@@ -100,7 +100,7 @@ label-visible-padding = 2
 ;   %index%
 ;   %output%
 ; Default: %icon%  %name%
-label-urgent = %index%
+label-urgent = %icon% %index%
 label-urgent-foreground = #000000
 label-urgent-background = #bd2c40
 label-urgent-padding = 2

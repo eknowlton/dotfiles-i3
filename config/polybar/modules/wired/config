@@ -1,5 +1,5 @@
 type = internal/network
-interface = wlp4s0
+interface = enp3s0
 
 ; Seconds to sleep between updates
 ; Default: 1
@@ -52,7 +52,7 @@ format-packetloss = <animation-packetloss> <label-connected>
 ;   %linkspeed% [wired]
 
 ; Default: %ifname% %local_ip%
-label-connected = [ %essid% %upspeed:7% %downspeed:7% %local_ip% %local_ip6% ]
+label-connected = [ %upspeed:8% %downspeed:8% %local_ip% %local_ip6% ]
 label-connected-foreground = #eefafafa
 
 ; Default: (none)

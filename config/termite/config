@@ -4,7 +4,8 @@
 foreground      = #888888
 foreground_bold = #888888
 cursor          = #888888
-background      = #151515
+#background      = #151515
+background      = rgba(0, 0, 0, 0.5)
 
 # black
 color0  = #292929
@@ -39,4 +40,4 @@ color7  = #888888
 color15 = #e8e8d3
 
 [options]
-font = DejaVuSansMono Nerd Font 13
+font = DejaVuSansMono Nerd Font 11
