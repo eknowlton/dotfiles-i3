@@ -1,9 +1,9 @@
 [colors]
 
 # special
-foreground      = #888888
-foreground_bold = #888888
-cursor          = #888888
+foreground      = #E6E6E6
+foreground_bold = #F9F9F9
+cursor          = #FFFFFF
 background      = #151515
 
 # black
@@ -39,4 +39,5 @@ color7  = #888888
 color15 = #e8e8d3
 
 [options]
-font = DejaVuSansMono Nerd Font 11
+#font = DejaVuSansMono Nerd Font 10
+font = JetBrains Mono 10

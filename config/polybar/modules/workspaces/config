@@ -39,7 +39,8 @@ reverse-scroll = false
 ; containing 'code' in the label
 ; Default: false
 fuzzy-match = true
-Additional formatting
+
+; Additional formatting
 ; ws-icon-[0-9]+ = label;icon
 ; NOTE: The label needs to match the name of the i3 workspace
 ws-icon-0 = 1;爵
@@ -71,7 +72,7 @@ label-mode-background = #e60053
 ; Default: %icon%  %name%
 label-focused = %icon% %index%
 label-focused-foreground = #ffffff
-label-focused-background = #805DADE2
+label-focused-background = #5DADE2
 label-focused-underline = #fba922
 label-focused-padding = 2
 
@@ -92,6 +93,7 @@ label-unfocused-padding = 2
 ; Default: %icon%  %name%
 label-visible = %icon% %index%
 label-visible-underline = #555555
+label-visible-background = #805DADE2
 label-visible-padding = 2
 
 ; Available tokens:

@@ -10,7 +10,7 @@
 [colors]
 
 [bar/primary-top]
-background = #20000000
+background = #80000000
 width = 100%
 height = 45
 monitor = ${env:MONITOR_PRIMARY}

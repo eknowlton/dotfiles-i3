@@ -36,10 +36,11 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias vim="nvim"
-alias ll="ls -la"
+alias ll="exa -la"
 alias vimd="nvim -d"
-alias rails="./bin/rails"
-alias bundle="./bin/bundle"
+alias lrails="./bin/rails"
+alias lbundle="./bin/bundle"
+alias dce="docker-compose exec"
 
 export EDITOR="nvim"
 
@@ -48,6 +49,12 @@ source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 [[ -d "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
 [[ -d "$HOME/.deno" ]] && export PATH="$HOME/.deno/bin:$PATH"
 [[ -d "$HOME/.cargo" ]] && export PATH="$HOME/.cargo/bin:$PATH"
+[[ -d "$HOME/go" ]] && export GOPATH="$HOME/go"
+[[ -d "$HOME/go" ]] && export PATH="$PATH:$HOME/go/bin"
+[[ -d "$HOME/.composer" ]] && export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 eval "$(direnv hook zsh)"
 
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export ANDROID_HOME="$HOME/.android/"
