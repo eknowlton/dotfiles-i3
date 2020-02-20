@@ -192,9 +192,9 @@ for_window [class="Gnome-todo" instance="gnome-todo"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 for_window [class="org.remmina.Remmina" instance="org.remmina.Remmina" title="Remmina Remote Desktop Client"] floating enable
 for_window [class="jetbrains-datagrip" instance="sun-awt-X11-XWindowPeer" title="win0"] floating enable
-for_window [class="Blueman-manager" id=44040199 instance="blueman-manager" title="Bluetooth Devices"] floating enable
+for_window [class="Blueman-manager" instance="blueman-manager" title="Bluetooth Devices"] floating enable
 
-exec_always ~/.screenlayout/three-monitors-with-tv.sh
+exec_always ~/.screenlayout/three-monitors.sh
 exec_always compton --config ~/.config/compton/compton.conf >> /var/log/compton.log 2>&1
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec xautolock -time 5 -locker $Locker

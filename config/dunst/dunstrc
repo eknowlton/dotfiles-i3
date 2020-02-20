@@ -8,9 +8,8 @@
     bounce_freq = 0
     show_age_threshold = 60
     word_wrap = yes
-    ignore_newline = no
-    geometry = "500x10-30+60"
-    transparency = 25
+    ignore_newline = no 
+    geometry = "600x10-30-30"
     transparency = 0
     idle_threshold = 120
     monitor = 0
@@ -20,16 +19,15 @@
     separator_height = 0
     padding = 10
     horizontal_padding = 10
-    separator_color = #bfbfbf
+    separator_color = #fff
     startup_notification = false
-    show_indicators = no
+    show_indicators = yes
     browser = /usr/bin/google-chrome-beta -new-tab
     icon_position = left
-    icon_folders = /usr/share/icons/Notifications
-    max_icon_size = 32
+    max_icon_size = 96
 
 [frame]
-    color = "#ffffff"
+    color = "#000"
     width = 0
 
 [shortcuts]
@@ -56,29 +54,7 @@
 [Discord]
     appname = Discord Canary
     format = "<b>%s</b>\n%b"
-    new_icon = Discord
-
-[WMail]
-    appname = Electron
-    format = "<b>%s</b>\n%b"
-    new_icon = WMail
-    timeout = 2000
-
-[NCMPCPP]
-    appname = mpc
-    format = "<b>Now Playing:</b>\n%s\n%b"
-    #format = "<b>%s</b>\n%b"
-    new_icon = NCMPCPP
-    timeout = 10
 
 [Spotify]
-    appname = Spotify
     format = "<b>Now Playing:</b>\n%s\n%b"
-    new_icon = Spotify
     timeout = 10
-
-[Transmission]
-    appname = Transmission
-    format = "<b>%s</b>\n%b"
-    new_icon = Transmission
-    timeout = 2000
