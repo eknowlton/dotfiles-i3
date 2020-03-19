@@ -1,43 +1,44 @@
 [colors]
 
 # special
-foreground      = #E6E6E6
-foreground_bold = #F9F9F9
-cursor          = #FFFFFF
-background      = #151515
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+background      = #161616
 
 # black
-color0  = #292929
-color8  = #525252
+color0  = #222222
+color8  = #666666
 
 # red
-color1  = #cf6a4c
-color9  = #ff9d80
+color1  = #e84f4f
+color9  = #d23d3d
 
 # green
-color2  = #19cb00
-color10 = #23fd00
+color2  = #b7ce42
+color10 = #bde077
 
 # yellow
-color3  = #fad07a
-color11 = #ffefbf
+color3  = #fea63c
+color11 = #ffe863
 
 # blue
-color4  = #8197bf
-color12 = #accaff
+color4  = #66aabb
+color12 = #aaccbb
 
 # magenta
-color5  = #8787af
-color13 = #c4c4ff
+color5  = #b7416e
+color13 = #e16a98
 
 # cyan
-color6  = #668799
-color14 = #80bfaf
+color6  = #6d878d
+color14 = #42717b
 
 # white
-color7  = #888888
-color15 = #e8e8d3
+color7  = #dddddd
+color15 = #cccccc
+
+background = rgba(0, 0, 0, 0.8)
 
 [options]
-#font = DejaVuSansMono Nerd Font 10
 font = JetBrains Mono 10

@@ -3,7 +3,7 @@ type = internal/xwindow
 ; Available tags:
 ;   <label> (default)
 format = <label>
-format-background = #30000000
+format-background = #80000000
 format-foreground = #FFF
 format-padding = 4
 
@@ -17,5 +17,5 @@ label-maxlen = 50
 ; Available tokens:
 ;   None
 label-empty =
-label-empty-background = #00000000
+label-empty-background = #80000000
 label-empty-foreground = #707880

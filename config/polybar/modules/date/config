@@ -19,7 +19,7 @@ time-alt = %H:%M:%S
 ; Available tags:
 ;   <label> (default)
 format = 🕓 <label>
-format-background = #20000000
+format-background = #80000000
 format-foreground = #fff
 
 ; Available tokens:

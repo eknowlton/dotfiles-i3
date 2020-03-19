@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="nanotech"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Setting ZSH Theme for Powerline9k
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -22,6 +22,19 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 
 plugins=(
   git
+  adb
+  archlinux
+  ansible
+  aws
+  cargo
+  docker-compose
+  docker
+  laravel
+  lol
+  npm
+  react-native
+  rust
+  ruby
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -36,15 +49,14 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias vim="nvim"
-alias ll="exa -la"
+alias ll="exa -la --header --group"
 alias vimd="nvim -d"
 alias lrails="./bin/rails"
 alias lbundle="./bin/bundle"
 alias dce="docker-compose exec"
+alias cat="bat"
 
 export EDITOR="nvim"
-
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
 [[ -d "$HOME/.local/bin" ]] && export PATH="$HOME/.local/bin:$PATH"
 [[ -d "$HOME/.deno" ]] && export PATH="$HOME/.deno/bin:$PATH"
@@ -57,4 +69,4 @@ eval "$(direnv hook zsh)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-export ANDROID_HOME="$HOME/.android/"
+export ANDROID_SDK_ROOT=~/Android/Sdk

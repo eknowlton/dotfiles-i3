@@ -50,11 +50,3 @@
     background = "#ffffff"
     foreground = "#595959"
     timeout = 5
-
-[Discord]
-    appname = Discord Canary
-    format = "<b>%s</b>\n%b"
-
-[Spotify]
-    format = "<b>Now Playing:</b>\n%s\n%b"
-    timeout = 10

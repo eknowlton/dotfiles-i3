@@ -38,6 +38,7 @@ font-0 = DejaVuSansMono Nerd Font:pixelsize=14;1
 ;   right
 ;   none
 tray-position = right
+wm-restack = i3
 
 ; If true, the bar will not shift its
 ; contents when the tray changes
@@ -56,7 +57,7 @@ tray-transparent = false
 ; ARGB color (e.g. #f00, #ff992a, #ddff1023)
 ; By default the tray container will use the bar
 ; background color.
-tray-background = #50000000
+tray-background = #80000000
 
 ; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 tray-offset-x = 0
@@ -69,7 +70,7 @@ tray-padding = 4
 tray-scale = 1.0
 
 [bar/secondary-top]
-background = #20000000
+background = #80000000
 width = 100%
 height = 45
 monitor = ${env:MONITOR}
